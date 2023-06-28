@@ -1,4 +1,4 @@
-# shopping_list
+# ExpenseTracker
 
 A new Flutter project.
 
