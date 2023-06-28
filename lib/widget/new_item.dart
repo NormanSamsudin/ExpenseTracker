@@ -37,7 +37,7 @@ class _NewItemState extends State<NewItem> {
       print(_enteredQtt);
       print(_selectCategory.title);
       //================================================================================================
-      final url = Uri.https('xpense-6e508-default-rtdb.firebaseio.com',
+      final url = Uri.https('xpense-yourfirebase-database.firebaseio.com',
           '/expense-list.json'); // not complete url
       final response = await http.post(
         url,
