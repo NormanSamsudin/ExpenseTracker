@@ -207,7 +207,7 @@ class _ExpenseListState extends State<ExpenseList> {
 
     //url expense list
     final url = Uri.https(
-        'xpense-6e508-default-rtdb.firebaseio.com', 'expense-list.json');
+        'xpense-yourfirebase-database.firebaseio.com', 'expense-list.json');
 
     // better error handling
     try {
