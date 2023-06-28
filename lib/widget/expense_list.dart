@@ -63,7 +63,7 @@ class _ExpenseListState extends State<ExpenseList> {
       expenseItems.remove(item);
     });
 
-    final url = Uri.https('xpense-6e508-default-rtdb.firebaseio.com',
+    final url = Uri.https('xpense-yourfirebase-database.firebaseio.com',
         '/expense-list/${item.id}.json'); // kne target spesific id
     final response = await http.delete(url);
 
@@ -202,69 +202,6 @@ class _ExpenseListState extends State<ExpenseList> {
     );
   }
 
-  // void getBalance() async {
-  //   final url = Uri.https('xpense-6e508-default-rtdb.firebaseio.com',
-  //       '/balance.json'); // not complete url
-  //   try {
-  //     final response = await http.get(url);
-
-  //     //cara nak handle error kalau salah request
-  //     // if (response.statusCode >= 400 || response2.statusCode >= 400) {
-  //     if (response.statusCode >= 400) {
-  //       setState(() {
-  //         _error = 'Failed to fetch data. Please try again later';
-  //       });
-  //     }
-
-  //     print(response.body);
-  //     //untuk jsondecode ni kalau response body die null
-  //     // nnti akan ada problem sbb null bukan subtye of Map<String, dynamic>
-
-  //     // if (response.body == 'null' || response2.body == 'null') {
-  //     if (response.body == 'null') {
-  //       //dekat sini null die special dlm string sbb firebase yg return mcmtu
-  //       setState(() {
-  //         _isLoading = false;
-  //       });
-  //       return;
-  //     }
-
-  //     final Map<String, dynamic> balanceData = json.decode(response.body);
-  //     final List<Balance> balance = [];
-
-  //     // final Map<String, dynamic> balanceData = jsonDecode(response2.body);
-  //     // final List<String> balance = [];
-
-  //     for (final item in balanceData.entries) {
-  //       // final category = categories.entries
-  //       //     .firstWhere(
-  //       //         (catItem) => catItem.value.title == item.value['category'])
-  //       //     .value;
-  //       balance[0] = Balance(
-  //         id: item.key,
-  //         balance: item.value['balance'],
-  //       );
-  //     }
-
-  //     // for (final item in balanceData.entries) {
-  //     // final category = categories.entries
-  //     //     .firstWhere(
-  //     //         (catItem) => catItem.value.title == item.value['category'])
-  //     //     .value;
-  //     //   balance.add(item.value);
-  //     // }
-
-  //     // print(balance);
-
-  //     setState(() {
-  //       balanceItems[0] = balance[0];
-  //     });
-  //   } catch (err) {
-  //     setState(() {
-  //       _error = 'Failed to fetch data. Please try again later';
-  //     });
-  //   }
-  // }
 
   void loadItems() async {
 
